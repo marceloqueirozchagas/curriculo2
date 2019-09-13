@@ -2488,7 +2488,7 @@ h6 {
   margin-bottom: 18px;
   text-transform: uppercase; }
 .welcome_text p {
-  max-width: 495px;
+  /* max-width: 495px; */
   font-family: "Roboto", sans-serif;
   margin-bottom: 40px; }
 
@@ -2753,7 +2753,7 @@ h6 {
     .personal_text .personal_social li a {
       line-height: 40px;
       width: 40px;
-      background: #e8e8e8;
+      background: #38a4ff;
       border-radius: 5px;
       display: inline-block;
       text-align: center;
