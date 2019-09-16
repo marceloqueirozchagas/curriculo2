@@ -1,130 +1,84 @@
-<section class="mytabs_area p_120">
+<section class="mytabs_area p_120" id='experience'>
   <div class="container">
     <div class="tabs_inner">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
           <a
             class="nav-link active"
-            id="home-tab"
+            id="experience-tab"
             data-toggle="tab"
-            href="#home"
+            href="#experience"
             role="tab"
-            aria-controls="home"
+            aria-controls="experience"
             aria-selected="true"
-            >Experiecia</a
+            >{{experience.title}}</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
-            id="profile-tab"
+            id="education-tab"
             data-toggle="tab"
-            href="#profile"
+            href="#education"
             role="tab"
-            aria-controls="profile"
+            aria-controls="education"
             aria-selected="false"
-            >Cursos</a
+            >{{education.title}}</a
           >
         </li>
       </ul>
       <div class="tab-content" id="myTabContent">
         <div
           class="tab-pane fade show active"
-          id="home"
+          id="experience"
           role="tabpanel"
-          aria-labelledby="home-tab"
+          aria-labelledby="experience-tab"
         >
           <ul class="list">
-            <li>
+            <li *ngFor="let experience of experience.itens">
               <span></span>
               <div class="media">
                 <div class="d-flex">
-                  <p>jul 2016 - Presente</p>
+                  <p>{{experience.start}} - {{experience.end}}</p>
                 </div>
                 <div class="media-body">
-                  <h4>Miltec</h4>
+                  <h4>{{experience.title}}</h4>
                   <div
                     style="margin-top: -20px; color: #fff; font-size: 15px; line-height: 1; margin-bottom: 5px; "
                   >
-                    Tecnologia da Informação
+                    {{experience.subTitle}}
                   </div>
                   <p>
-                    - Analista de Sistemas<br />
-                    - SQL, C#, MVC<br />
-                    - Html, Css, AngularJS<br />
-                    - Angular, ionic
+                    {{experience.description}}
                   </p>
                 </div>
               </div>
             </li>
-            <li>
-              <span></span>
-              <div class="media">
-                <div class="d-flex">
-                  <p>jul 2015 - jul 2016</p>
-                </div>
-                <div class="media-body">
-                  <h4>SGI</h4>
-                  <div
-                    style="margin-top: -20px; color: #fff; font-size: 15px; line-height: 1; margin-bottom: 5px; "
-                  >
-                    Superintendência de Gestão da Informação - MS
-                  </div>
-                  <p>
-                    - Analista de Sistemas<br />
-                    - SQL, C#, MVC<br />
-                    - Html, Css, AngularJS
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <span></span>
-              <div class="media">
-                <div class="d-flex">
-                  <p>out 2011 - jul 2015</p>
-                </div>
-                <div class="media-body">
-                  <h4>SED</h4>
-                  <div
-                    style="margin-top: -20px; color: #fff; font-size: 15px; line-height: 1; margin-bottom: 5px; "
-                  >
-                    Secretaria de Estado de Educação
-                  </div>
-                  <p>
-                    - Analista de Sistemas<br />
-                    - Scrum Master<br />
-                    - SQL, C#, WebForms<br />
-                    - Html, Css, Jquery
-                  </p>
-                </div>
-              </div>
-            </li>
+            
           </ul>
         </div>
         <div
           class="tab-pane fade"
-          id="profile"
+          id="education"
           role="tabpanel"
-          aria-labelledby="profile-tab"
+          aria-labelledby="education-tab"
         >
           <ul class="list">
-            <li>
+            <li *ngFor="let education of education.itens">
               <span></span>
               <div class="media">
                 <div class="d-flex">
-                  <p>jan 2006 - dez 2010</p>
+                  <p>{{education.start}} - {{education.end}}</p>
                 </div>
                 <div class="media-body">
-                  <h4>FCG</h4>
+                  <h4>{{education.title}}</h4>
                   <div
                     style="margin-top: -20px; color: #fff; font-size: 15px; line-height: 1; margin-bottom: 5px; "
                   >
-                    Faculdade Campo Grande
+                    {{education.subTitle}}
                   </div>
                   <p>
-                    Ciência da Computação
+                    {{education.description}}
                   </p>
                 </div>
               </div>

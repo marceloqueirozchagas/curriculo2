@@ -20,18 +20,9 @@
           class="collapse navbar-collapse offset"
           id="navbarSupportedContent"
         >
-          <ul class="nav navbar-nav menu_nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about-us.html">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Experiência</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Projetos</a>
+          <ul class="nav navbar-nav menu_nav ml-auto" id='nav'>
+            <li class="nav-item active" *ngFor="let menu of menus">
+              <a class="nav-link" [href]="menu.url">{{ menu.name }}</a>
             </li>
           </ul>
         </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuModel } from '../models/menu.model';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public menus: MenuModel[] = [
+    new MenuModel('Home','#home'),
+    new MenuModel('Sobre','#about'),
+    new MenuModel('Experiência','#experience'),
+    new MenuModel('Projetos','#projects'),
+  ];
   constructor() { }
 
   ngOnInit() {
