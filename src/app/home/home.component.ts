@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonalModel } from '../models/personal.model';
-import { SocialModel } from '../models/social.model';
+import { PersonalModel } from './personal.model';
+import { SocialModel } from './social.model';
 
 @Component({
   selector: 'app-home',

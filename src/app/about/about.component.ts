@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AboutModel } from '../models/about.model';
+import { AboutModel } from './about.model';
 
 @Component({
   selector: 'app-about',

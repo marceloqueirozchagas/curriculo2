@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TabsModel } from '../models/tabs.model';
-import { TabItemModel } from '../models/tabItem.model';
+import { TabsModel } from './tabs.model';
+import { TabItemModel } from './tabItem.model';
 
 @Component({
   selector: 'app-experience',
