@@ -6,11 +6,10 @@ export class PersonalModel{
         public greeting: string,
         public fullName: string,
         public ocupation: string,
-        public descrition: string,
+        public description: string,
         public birthDate: string,
         public phoneNumber: string,
         public email: string,
-        public location: string,
-        public listSocial: SocialModel[]
+        public location: string
     ){}
 }

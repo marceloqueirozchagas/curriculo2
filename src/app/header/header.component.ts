@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuModel } from './menu.model';
+import { Component, OnInit, Input } from '@angular/core';
+import { HeaderModel } from './header.model';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +8,8 @@ import { MenuModel } from './menu.model';
 })
 export class HeaderComponent implements OnInit {
 
-  public menus: MenuModel[] = [
-    new MenuModel('Home','#home'),
-    new MenuModel('Sobre','#about'),
-    new MenuModel('Experiência','#experience'),
-    new MenuModel('Projetos','#projects'),
-  ];
+  @Input() headerModel: HeaderModel;
+
   constructor() { }
 
   ngOnInit() {

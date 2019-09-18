@@ -1,4 +1,4 @@
-<section class="mytabs_area p_120" id='experience'>
+<section class="mytabs_area p_120" id="experience" *ngIf="experienceModel">
   <div class="container">
     <div class="tabs_inner">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -11,8 +11,8 @@
             role="tab"
             aria-controls="experience"
             aria-selected="true"
-            >{{experience.title}}</a
-          >
+            >{{ experienceModel.experience.title }}
+          </a>
         </li>
         <li class="nav-item">
           <a
@@ -23,8 +23,8 @@
             role="tab"
             aria-controls="education"
             aria-selected="false"
-            >{{education.title}}</a
-          >
+            >{{ experienceModel.education.title }}
+          </a>
         </li>
       </ul>
       <div class="tab-content" id="myTabContent">
@@ -35,26 +35,19 @@
           aria-labelledby="experience-tab"
         >
           <ul class="list">
-            <li *ngFor="let experience of experience.itens">
+            <li *ngFor="let experience of experienceModel.experience.itens">
               <span></span>
               <div class="media">
                 <div class="d-flex">
-                  <p>{{experience.start}} - {{experience.end}}</p>
+                  <p>{{ experience.start }} - {{ experience.end }}</p>
                 </div>
                 <div class="media-body">
-                  <h4>{{experience.title}}</h4>
-                  <div
-                    style="margin-top: -20px; color: #fff; font-size: 15px; line-height: 1; margin-bottom: 5px; "
-                  >
-                    {{experience.subTitle}}
-                  </div>
-                  <p>
-                    {{experience.description}}
-                  </p>
+                  <h4>{{ experience.title }}</h4>
+                  <div class="sub-title">{{ experience.subTitle }}</div>
+                  <p>{{ experience.description }}</p>
                 </div>
               </div>
             </li>
-            
           </ul>
         </div>
         <div
@@ -64,22 +57,16 @@
           aria-labelledby="education-tab"
         >
           <ul class="list">
-            <li *ngFor="let education of education.itens">
+            <li *ngFor="let education of experienceModel.education.itens">
               <span></span>
               <div class="media">
                 <div class="d-flex">
-                  <p>{{education.start}} - {{education.end}}</p>
+                  <p>{{ education.start }} - {{ education.end }}</p>
                 </div>
                 <div class="media-body">
-                  <h4>{{education.title}}</h4>
-                  <div
-                    style="margin-top: -20px; color: #fff; font-size: 15px; line-height: 1; margin-bottom: 5px; "
-                  >
-                    {{education.subTitle}}
-                  </div>
-                  <p>
-                    {{education.description}}
-                  </p>
+                  <h4>{{ education.title }}</h4>
+                  <div class="sub-title">{{ education.subTitle }}</div>
+                  <p>{{ education.description }}</p>
                 </div>
               </div>
             </li>

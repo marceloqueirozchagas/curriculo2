@@ -1,12 +1,12 @@
-<section class="testimonials_area p_120" id="projects">
+<section class="testimonials_area p_120" id="projects" *ngIf='projectModel'>
   <div class="container">
     <div class="main_title">
-      <h2>{{ project.title }}</h2>
-      <p>{{ project.description }}</p>
+      <h2>{{ projectModel.title }}</h2>
+      <p>{{ projectModel.description }}</p>
     </div>
     <div class="testi_inner">
       <div class="testi_slider owl-carousel">
-        <div class="item" *ngFor="let item of project.itens">
+        <div class="item" *ngFor="let item of projectModel.itens">
           <div class="testi_item">
             <h4>{{ item.title }}</h4>
             <p>{{ item.description }}</p>

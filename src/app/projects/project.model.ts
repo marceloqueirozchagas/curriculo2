@@ -1,6 +1,6 @@
 import { ProjectItemModel } from './projectItem.model';
 
-export class projectModel {
+export class ProjectModel {
     constructor(
         public title: string,
         public description: string,

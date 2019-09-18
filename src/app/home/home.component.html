@@ -1,45 +1,45 @@
-<section class="home_banner_area" id='home'>
+<section class="home_banner_area" id='home' *ngIf='homeModel'>
   <div class="container box_1620">
     <div class="banner_inner d-flex align-items-center">
       <div class="banner_content">
         <div class="media">
           <div class="d-flex">
-            <img [src]="personal.profileImgUrl" alt="" />
+            <img [src]="homeModel.personal.profileImgUrl" alt="" />
           </div>
           <div class="media-body">
             <div class="personal_text">
-              <h6>{{ personal.greeting }}</h6>
-              <h3>{{ personal.fullName }}</h3>
-              <h4>{{ personal.ocupation }}</h4>
+              <h6>{{ homeModel.personal.greeting }}</h6>
+              <h3>{{ homeModel.personal.fullName }}</h3>
+              <h4>{{ homeModel.personal.ocupation }}</h4>
               <p>
-                {{ personal.description }}
+                {{ homeModel.personal.description }}
               </p>
               <ul class="list basic_info">
                 <li>
                   <a href="#"
                     ><i class="lnr lnr-calendar-full"></i>
-                    {{ personal.birthDate }}</a
+                    {{ homeModel.personal.birthDate }}</a
                   >
                 </li>
                 <li>
                   <a href="#"
                     ><i class="lnr lnr-phone-handset"></i>
-                    {{ personal.phoneNumber }}</a
+                    {{ homeModel.personal.phoneNumber }}</a
                   >
                 </li>
                 <li>
                   <a href="#"
-                    ><i class="lnr lnr-envelope"></i> {{ personal.email }}</a
+                    ><i class="lnr lnr-envelope"></i> {{ homeModel.personal.email }}</a
                   >
                 </li>
                 <li>
                   <a href="#"
-                    ><i class="lnr lnr-home"></i> {{ personal.location }}</a
+                    ><i class="lnr lnr-home"></i> {{ homeModel.personal.location }}</a
                   >
                 </li>
               </ul>
               <ul class="list personal_social">
-                <li *ngFor="let social of personal.listSocial">
+                <li *ngFor="let social of homeModel.listSocial">
                   <a
                     [href]="social.url"
                     target="_blank"

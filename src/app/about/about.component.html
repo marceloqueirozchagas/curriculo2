@@ -1,11 +1,11 @@
-<section class="welcome_area p_120" id="about">
+<section class="welcome_area p_120" id="about" *ngIf='aboutModel'>
   <div class="container">
     <div class="row welcome_inner">
       <div class="col-lg-12">
         <div class="welcome_text">
-          <h4>{{ about.title }}</h4>
+          <h4>{{ aboutModel.title }}</h4>
           <p>
-            {{ about.description }}
+            {{ aboutModel.description }}
           </p>
         </div>
       </div>

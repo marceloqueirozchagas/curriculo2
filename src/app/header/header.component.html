@@ -1,4 +1,4 @@
-<header class="header_area">
+<header class="header_area" *ngIf='headerModel'>
   <div class="main_menu">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container box_1620">
@@ -21,7 +21,7 @@
           id="navbarSupportedContent"
         >
           <ul class="nav navbar-nav menu_nav ml-auto" id='nav'>
-            <li class="nav-item active" *ngFor="let menu of menus">
+            <li class="nav-item active" *ngFor="let menu of headerModel.menus">
               <a class="nav-link" [href]="menu.url">{{ menu.name }}</a>
             </li>
           </ul>
